@@ -1,0 +1,26 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.wrapper .social_media ul li{
+    width: 55px;
+    height: 40px;
+    background: linear-gradient(to right,#d06d0a,#cc4040);
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    margin-left: 20px;
+
+}
+
+.wrapper .social_media ul li a{
+    color :rgb(170, 196, 201);
+    display: block;
+    font-size: 25px;
+}
