@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sign Up</title>
+<link rel="stylesheet" href="icomoon/style.css">
+<link rel="stylesheet" href="./register.css">
+</head>
+
+<body >
+
+<div class="form-container">
+
+        <form name="myregist" action="./aa.html" method="POST  role="form" onsubmit="signUp(event);" autocomplete="off">
+                <h2 style="text-align: center;">SIGN UP</h2>
+
+                <a href='./aa.html'>
+                        <div id="close"> &#10006;  </div>
+                </a> 
+
+
+
+        <div class="papa">
+                <label for="firstname""><b>firstname</b></label>
+                <input id="firstname" type="text" placeholder="Enter Firstname" name="firstname" required>
+                <div class="icon-check-circle"> </div>
+                <p id="usermessage"> At least 3 letters and maximum 15 letter. </p>
+
+        </div>
+
+
+
+        <div class="papa">
+                <label for="lastname"><b>lastname</b></label>
+                <input id="lastname" type="text" placeholder="Enter Lastname" name="lastname" required>
+                <div class="icon-check-circle"> </div>
+                <p id="lastmessage">  At least 3 letters and maximum 15 letter. </p>
+
+        </div>
+
+
+
+
+        <div class="papa">
+                <label for="email"><b>Email</b></label>
+                <input id="email" type="email" placeholder="Enter Email" name="email" required>
+                <div class="icon-check-circle"> </div>
+                <P id="emailmessage">Please enter a correct email address.</P>
+                </div>
+
+
+        <div class="papa">
+                <label for="psw"><b>Password</b></label>
+                <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+                <div class="icon-check-circle"> </div>
+                <P id="pswmessage">Password must be at least 8 characters, no more than 15 characters,no special characters and must include at least one upper case letter, one lower case letter, and one numeric digt.</P>
+                </div>
+
+
+
+        <div class="papa">
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input id="pswrepeat" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <div class="icon-check-circle"> </div>
+                <P id="repeatmessage">Please make sure your passwords match</P>
+        </div>
+
+        
+
+
+
+ <div class="control" style="display:flex;">
+       
+       
+                <button id="regbtn" disabled type="submit" class="registerbtn">Register</button> </a> 
+                <button id="reset"  type="reset" class="resetbtn">Reset</button>
+           
+</div>
+</form>
+
+
+</html>
+<script src="./register.js"></script>
+</body>
+
+</html>
