@@ -146,6 +146,8 @@ header .form-control:focus {
   background-color: #f49301;
   color: white;
   transition: all 1s;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .Add-cart-btn:hover {
