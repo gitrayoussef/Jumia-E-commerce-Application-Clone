@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: montserrat;
+    color:#000;
+    background: url('./assets/sh.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-container {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    width: 380px;
+    padding: 50px;
+    border-color: #000;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #000;
+}
+
+
+.control input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: #222;
+    border-color: #000;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
+.control input[type=submit] {
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    opacity: 0.7;
+    transition: opacity .3s ease;
+}
+
+.control input[type=submit]:hover {
+    opacity: 1;
+}
+
+input {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;
+  }
+  input:optional {
+    border-color: gray;
+  }
+  input:required:valid {
+    border-color: green;
+  }
+  input:invalid {
+    border-color: red;
+    
+  }
+  input:invalid+div {
+    content: "enter valid data";
+    
+  }
+
+  input:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+    
+  }
+  input:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background-size: 25px;
+  }
+
+  .regist{
+    color: #000;
+    text-decoration: none;
+    
+  }
+
+  .link{
+    text-align: center;
+    justify-content: center;
+  }
