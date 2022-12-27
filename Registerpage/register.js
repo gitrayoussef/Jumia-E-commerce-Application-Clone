@@ -9,24 +9,40 @@ const activeReg = () => {
 }
 
 
-
-// local storage
-
 const signUp = e => {
+  let firstname = document.getElementById('firstname').value,
+  lastname = document.getElementById('lastname').value,
+  email = document.getElementById('email').value,
+  psw  = document.getElementById('psw').value;
 
-  
-  let formData = JSON.parse(localStorage.getItem('formData')) || [];
-  formData.push({
-    firstname : document.getElementById('firstname').value,
-    lastname: document.getElementById('lastname').value,
-    email : document.getElementById('email').value,
-    psw : document.getElementById('psw').value
-      })
-      localStorage.setItem('formData', JSON.stringify(formData));
-      document.querySelector("form").reset();
-      e.preventDefault();
-      
-    }
+  let user = JSON.parse(localStorage.getItem('user')) || [];
+
+  let exist = user.length && 
+      JSON.parse(localStorage.getItem('user')).some(data => 
+          data.email== email
+         
+      );
+
+  if(!exist){
+      user.push({ firstname, lastname , email, psw, isloggedin:true  });
+      localStorage.setItem('user', JSON.stringify(user));
+      document.querySelector('form').reset();
+     
+     
+  }
+  else{
+      alert(" email is found!!!\n You have already signed up");
+  }
+  e.preventDefault();
+}
+
+
+
+
+
+
+
+
 
 
 // 15 letters from 2 to 15
