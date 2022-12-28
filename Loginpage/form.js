@@ -1,5 +1,5 @@
 //get the data from the local storage
-
+const updatedLocalStorage = [];
 function signIn() {
   let email = document.getElementById("email").value,
     psw = document.getElementById("psw").value;
@@ -16,13 +16,19 @@ function signIn() {
   } else {
     //between the quotation mark insert whatever the home page is called
     JSON.parse(localStorage.getItem("user")).forEach((element) => {
-      if (element.email != email && element.psw != psw) {
+      if (element.email == email && element.psw == psw) {
+        element.isloggedin = true;
+        updatedLocalStorage.push(element);
+      } else {
         element.isloggedin = false;
-        console.log(element);
+        updatedLocalStorage.push(element);
       }
     });
     // location.href = "../Homepage/index.html";
   }
+  JSON.parse(
+    localStorage.setItem("user", JSON.stringify(updatedLocalStorage))
+  );
 }
 const submitBtn = document.querySelector(".submit-btn");
 submitBtn.addEventListener("click", function (e) {
