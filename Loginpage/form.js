@@ -17,6 +17,7 @@ function signIn() {
     //between the quotation mark insert whatever the home page is called
     JSON.parse(localStorage.getItem("user")).forEach((element) => {
       if (element.email == email && element.psw == psw) {
+        element.cart=[]
         element.isloggedin = true;
         updatedLocalStorage.push(element);
       } else {
@@ -24,7 +25,7 @@ function signIn() {
         updatedLocalStorage.push(element);
       }
     });
-    // location.href = "../Homepage/index.html";
+    location.href = "../Homepage/index.html";
   }
   JSON.parse(
     localStorage.setItem("user", JSON.stringify(updatedLocalStorage))
