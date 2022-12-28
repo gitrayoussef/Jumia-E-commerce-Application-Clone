@@ -16,6 +16,12 @@ const ratingStars = document.querySelector("input[data-role='rating']");
 // Define highlight search text
 const search = document.querySelector(".search-products");
 const searchBtn = document.querySelector(".search-products-btn");
+// Define Cart items
+const cart = [];
+const cartBadge = document.querySelector(".cart-badge");
+// Define user profile link & logging in
+const userProfileLink = document.querySelector(".profile-link");
+const userProfileSpan = document.querySelector(".profile-span");
 
 // popover
 popoverIcon.addEventListener("click", function (e) {
@@ -24,6 +30,7 @@ popoverIcon.addEventListener("click", function (e) {
 // get products
 window.addEventListener("load", function (e) {
   getData("https://dummyjson.com/products/category/groceries");
+  isLoggedIn();
 });
 // get product by rating
 chooseRating.addEventListener("click", async function (e) {
@@ -54,7 +61,6 @@ requiredMaxPrice.addEventListener("change", function (e) {
     sliderRequiredMaxPrice.value
   );
 });
-
 applyBtn.addEventListener("click", async function (e) {
   e.preventDefault();
   cardParent.replaceChildren();
@@ -64,9 +70,12 @@ applyBtn.addEventListener("click", async function (e) {
   choseCertainPriceRange(res);
 });
 // Highlight search text
-searchBtn.addEventListener("click", (e) => {
+searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
-  highlightSearchText();
+  const res = await getUrlData(
+    "https://dummyjson.com/products/category/groceries"
+  );
+  highlightSearchText(res);
 });
 
 // Define Function to fetch a certain url data
@@ -91,26 +100,28 @@ function createProductCard(product) {
     "p-0",
     "select-p"
   );
-  grid.style.height = "28rem";
   cardParent.appendChild(grid);
   const card = document.createElement("div");
   card.classList.add("card", "m-0");
   card.style.width = "100%";
-  card.style.height = "100%";
   grid.appendChild(card);
   const cardImg = document.createElement("img");
   cardImg.classList.add("card-img-top");
   cardImg.setAttribute("src", product.thumbnail);
-  cardImg.style.height = "50%";
+  cardImg.style.height = "250px";
   card.appendChild(cardImg);
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
   cardBody.style.height = "50%";
   cardImg.after(cardBody);
   const cardTitle = document.createElement("p");
-  cardTitle.classList.add("card-title", "text-truncate");
-  cardTitle.innerHTML = product.description;
+  cardTitle.classList.add("card-title", "text-truncate", "fw-bold");
+  cardTitle.innerHTML = product.title;
   cardBody.appendChild(cardTitle);
+  const cardDescription = document.createElement("p");
+  cardDescription.classList.add("card-title", "line-truncate");
+  cardDescription.innerHTML = product.description;
+  cardBody.appendChild(cardDescription);
   const cardText = document.createElement("p");
   cardText.classList.add("card-text", "fw-semibold");
   cardText.innerHTML = `EGP ${(
@@ -132,20 +143,71 @@ function createProductCard(product) {
   cardBody.appendChild(productRating);
   const button = document.createElement("button");
   button.textContent = "ADD TO CART";
-  button.classList.add("btn", "Add-cart-btn");
+  button.classList.add("btn", "add-cart-btn");
   productRating.after(button);
+  const cartBlock = document.createElement("div");
+  cartBlock.classList.add(
+    "d-none",
+    "w-100",
+    "m-0",
+    "d-flex",
+    "justify-content-between",
+    "align-items-center",
+    "cart-block"
+  );
+  cartBlock.innerHTML = `
+  <button class=" btn btn-success w-25 fw-bold fs-5 border-none minus" style="background-color:#f49301;">-</button>
+  <span class="w-50 text-success fs-5 text-dark text-center text-counter">0</span>
+  <button class="btn btn-success w-25 fw-bold fs-5 border-none plus" style="background-color:#f49301;">+</button>
+ `;
+  productRating.after(cartBlock);
   document.styleSheets[2].insertRule(
     ".card:hover {transform:scale(1.01);box-shadow:0px 0px 5px gray;z-index:10;border-radius:none;}"
   );
+  createProductCardEvents(cartBlock, button, product);
+}
+// Event handlers on created elements on the fly
+function createProductCardEvents(cartBlock, button, product) {
+  button.addEventListener("click", function (e) {
+    cartBlock.classList.remove("d-none");
+    button.classList.add("d-none");
+  });
+  cartBlock.addEventListener("click", function (e) {
+    if (e.target.classList.contains("plus")) {
+      for (const child of cartBlock.children) {
+        if (child.classList.contains("text-counter")) {
+          child.innerHTML++;
+          child.innerHTML >= 5
+            ? e.target.classList.add("disabled")
+            : e.target.classList.remove("disabled");
+          cart.push(product.id);
+          cartBadge.innerHTML = cart.length;
+          console.log(cart.length);
+        }
+      }
+    } else if (e.target.classList.contains("minus")) {
+      for (const child of cartBlock.children) {
+        if (child.classList.contains("text-counter")) {
+          child.innerHTML--;
+          child.innerHTML <= 0 ? (child.innerHTML = 0) : true;
+          let indexOfItemsInCart = cart.findIndex((e) => e === product.id);
+          if (indexOfItemsInCart !== -1) {
+            cart.splice(indexOfItemsInCart, 1);
+            cartBadge.innerHTML = cart.length;
+            console.log(cart.length);
+            console.log(cart);
+          }
+        }
+      }
+    }
+  });
 }
 // Define Function to get the data of the url & create element
 async function getData(url) {
   try {
     const res = await getUrlData(url);
-    for (let i = 0; i < 8; i++) {
-      for (const product of res.products) {
-        createProductCard(product);
-      }
+    for (const product of res.products) {
+      createProductCard(product);
     }
   } catch (e) {
     console.log(e);
@@ -167,52 +229,48 @@ function choseCertainPriceRange(res) {
     }
   }
 }
-
 // Define Function to fetch products according to certain rating
 function choseCertainRating(res) {
   for (const product of res.products) {
-    console.log(parseInt(product.rating));
-    console.log(ratingStars.value);
     if (parseInt(product.rating) == ratingStars.value) {
       createProductCard(product);
     }
   }
 }
-
 // Define Function to search text on page
-function highlightSearchText() {
+function highlightSearchText(res) {
   const searchText = search.value.toLowerCase();
   if (searchText) {
-    const regex = new RegExp(searchText, "gim");
-    let text = cardParent.innerHTML;
-    text = text.replace(
-      /(<mark class="highlight" style="background-color: yellow;">|<\/mark>)/gim,
-      ""
-    );
-    const newText = text.replace(
-      regex,
-      `<mark class="highlight" style="background-color: yellow;">${searchText}</mark>`
-    );
-    cardParent.innerHTML = newText;
+    for (const product of res.products) {
+      if (
+        product.description.toLowerCase().match(`${searchText}`) ||
+        product.title.toLowerCase().match(`${searchText}`)
+      ) {
+        cardParent.replaceChildren();
+        createProductCard(product);
+        const regex = new RegExp(searchText, "gim");
+        let text = cardParent.innerHTML;
+        text = text.replace(
+          /(<mark class="highlight" style="background-color: yellow;">|<\/mark>)/gim,
+          ""
+        );
+        const newText = text.replace(
+          regex,
+          `<mark class="highlight" style="background-color: yellow;">${searchText}</mark>`
+        );
+        cardParent.innerHTML = newText;
+      }
+    }
   }
 }
-
-// <div class="card m-0" style="width: 100%;">
-//                 <img src="..." class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                   <h5 class="card-title">Card title</h5>
-//                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-//                     card's content.</p>
-//                 </div>
-//                 <ul class="list-group list-group-flush">
-//                   <li class="list-group-item">An item</li>
-//                   <li class="list-group-item">A second item</li>
-//                   <li class="list-group-item">A third item</li>
-//                 </ul>
-//                 <div class="card-body">
-//                   <a href="#" class="card-link">Card link</a>
-//                   <a href="#" class="card-link">Another link</a>
-//                 </div>
-//               </div>
-
-//               <input data-role="rating" data-value="0" data-star-color="yellow" data-stared-color="yellow">
+// Function to check whether user is logged in or not
+function isLoggedIn() {
+  userProfileSpan.innerHTML = "Login/Resgister";
+  userProfileLink.setAttribute("href", "../Loginpage/form.html");
+  JSON.parse(localStorage.getItem("user")).forEach((user) => {
+    if (user.isloggedin) {
+      userProfileSpan.innerHTML = user.firstname + " " + user.lastname;
+      userProfileLink.setAttribute("href", "../Profile/index.html");
+    }
+  });
+}
