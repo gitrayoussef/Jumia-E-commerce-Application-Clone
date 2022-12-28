@@ -17,7 +17,6 @@ function signIn() {
     //between the quotation mark insert whatever the home page is called
     JSON.parse(localStorage.getItem("user")).forEach((element) => {
       if (element.email == email && element.psw == psw) {
-        element.cart=[]
         element.isloggedin = true;
         updatedLocalStorage.push(element);
       } else {
