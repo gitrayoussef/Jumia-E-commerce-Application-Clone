@@ -23,11 +23,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: transparent;
-    width: 380px;
+    width: 500px;
+    height: 500px;
     padding: 50px;
     border-color: #000;
     border-radius: 10px;
-    box-shadow: 7px 7px 60px #000;
+    box-shadow: 0px 0px 10px rgb(180, 179, 179);
 }
 
 
@@ -42,12 +43,13 @@ body {
 }
 
 .control input[type=submit] {
-    background: green;
+    background: #f49301;
     color: white;
     text-transform: uppercase;
     font-size: 1.2em;
-    opacity: 0.7;
+    opacity: 0.9;
     transition: opacity .3s ease;
+    border-color: #f49301;
 }
 
 .control input[type=submit]:hover {
@@ -79,13 +81,17 @@ input {
   }
 
   input:required:focus:valid {
-    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% rgb(205, 245, 205);
     background-size: 25px;
+    border-color: green;
+    outline: none;
     
   }
   input:focus:invalid {
-    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgb(244, 186, 186);
     background-size: 25px;
+    border-color: red;
+    outline: none;
   }
 
   .regist{
