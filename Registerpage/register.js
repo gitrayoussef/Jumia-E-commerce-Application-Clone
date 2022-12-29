@@ -25,7 +25,7 @@ const signUp = e => {
       );
 
   if(!exist){
-      user.push({ firstname, lastname , email, psw, isloggedin:true  });
+      user.push({ firstname, lastname , email, psw, isloggedin:true});
       localStorage.setItem('user', JSON.stringify(user));
       document.querySelector('form').reset();
      
