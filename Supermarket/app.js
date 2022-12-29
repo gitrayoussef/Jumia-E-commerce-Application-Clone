@@ -168,20 +168,22 @@ function createProductCard(product) {
   document.styleSheets[2].insertRule(
     ".card:hover {transform:scale(1.01);box-shadow:0px 0px 5px gray;z-index:10;border-radius:none;}"
   );
-  createProductCardEvents(cartBlock, button, product, card);
+  createProductCardEvents(cartBlock, button, product, cardBody);
 }
 // Event handlers on created elements on the fly
-function createProductCardEvents(cartBlock, button, product, card) {
-  card.addEventListener("click", function (e) {
-    e.stopPropagation();
+function createProductCardEvents(cartBlock, button, product, cardBody) {
+  cardBody.addEventListener('click', function (e) {
+    console.log("d");
     localStorage.setItem("product" , JSON.stringify(product))
-    location.href = "../Productpage/index.html";
+    location.href = "https://www.google.com"
   });
   button.addEventListener("click", function (e) {
+    e.stopPropagation();
     cartBlock.classList.remove("d-none");
     button.classList.add("d-none");
   });
   cartBlock.addEventListener("click", function (e) {
+    e.stopPropagation();
     if (e.target.classList.contains("plus")) {
       if (userProfileSpan.innerHTML === "Login/Resgister") {
         const plusBtn = document.querySelector(".plus");
@@ -286,7 +288,7 @@ function isLoggedIn() {
       userProfileLink.setAttribute("href", "../Profile/index.html");
       JSON.parse(localStorage.getItem("cart")).forEach((data) => {
         if (data.email === email) {
-          cartBadge.innerHTML = data.productsId.length;
+          cartBadge.innerHTML = data.products.length;
         }
       });
     }
@@ -304,16 +306,16 @@ function setItemsToUserCartToLocalStorage(product) {
       );
     if (user.isloggedin) {
       if (!exist) {
-        let productsId = [];
-        productsId.push(product.id);
-        cart.push({ email, productsId });
+        let products = [];
+        products.push(product);
+        cart.push({ email, products });
         localStorage.setItem("cart", JSON.stringify(cart));
         cartBadge.innerHTML = 1;
       } else {
         cart.forEach((data) => {
           if (data.email === email) {
-            data.productsId.push(product.id);
-            cartBadge.innerHTML = data.productsId.length;
+            data.products.push(product);
+            cartBadge.innerHTML = data.products.length;
             localStorage.setItem("cart", JSON.stringify(cart));
           }
         });
@@ -329,13 +331,13 @@ function deleteItemsFromUserCartFromLocalStorage(product) {
     if (user.isloggedin) {
       cart.forEach((data) => {
         if (data.email === email) {
-          let indexOfItemsInCart = data.productsId.findIndex(
-            (e) => e === product.id
+          let indexOfItemsInCart = data.products.findIndex(
+            (e) => e.id === product.id
           );
           if (indexOfItemsInCart !== -1) {
-            data.productsId.splice(indexOfItemsInCart, 1);
+            data.products.splice(indexOfItemsInCart, 1);
           }
-          cartBadge.innerHTML = data.productsId.length;
+          cartBadge.innerHTML = data.products.length;
           localStorage.setItem("cart", JSON.stringify(cart));
         }
       });
