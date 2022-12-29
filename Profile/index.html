@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>profile page</title>
+</head>
+
+<body class="bg-black-50">
+    <!-- banner -->
+    <div id="banner" class="row justify-content-center align-content-center m-0 w-100">
+        <div class="col-10 col-lg-11">
+            <img data-src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png"
+            src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png" class="img-fluid w-100"
+            alt="Flas-Sale-Desktop" />
+        </div>
+    </div>
+    <!-- start of shop-links -->
+    <div id="shp" class="row justify-content-center align-items-center  w-100 ms-0 me-0" >
+        <div class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5">
+        <div class="col-4 text-start">
+            <span class="icon-container"><i class="fa-solid fa-sun me-2"></i></span>
+            <span><a href="https://sell.jumia.com/en/start-now/" class="sell-link">Sell on Jumia</a></span>
+        </div>
+        <div class="col-5 text-center shp-pay-container row justify-content-between align-items-center">
+            <img src="./images/logo-jumia-pay.jpg" alt="" class="shp-logo-img crusor-pointer" />
+            <img src="./images/logo-jumia-pay.jpg" alt="" class="shp-logo-img" />
+        </div>
+        <div class="col-3  d-flex align-items-center justify-content-end language-container">
+            <img src="./images/18379990731626933880-128.png" alt="" class="shp-language-img me-2">
+            <span>English</span>
+        </div>
+    </div>
+    <!-- end of shop-links -->
+    <!-- Navbar -->
+        <!-- start of shop-header -->
+        <header
+        class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5 bg-white position-sticky top-0">
+        <ul class="nav justify-content-center w-100">
+            <div class="col-1 col-md-2 d-flex  align-items-center">
+                <li class="nav-item  popover-icon">
+                <i type="button" class="fa-solid fa-bars">
+                </i>
+                <!-- start of popover -->
+                <div class="popover-body d-none">
+                    <ul class="popover-content list-unstyled p-4">
+                    <li href="./products/supermarket" class=""><span><i
+                            class="fa-solid fa-apple-whole me-2 mb-3"></i>Supermarket</span></li>
+                    <li href="./products/fashion" class=""><span><i class="fa-solid fa-shirt me-2 mb-3"></i>Fashion</span>
+                    </li>
+                    <li href="./products/health&beauty" class=""><span><i class="fa-solid fa-user me-2 mb-3"></i>Health &
+                        Beauty</span></li>
+                    <li href="./products/phones&tablets" class=""><span><i
+                            class="fa-solid fa-mobile-screen-button me-2 mb-3"></i>Phones &
+                        Tablets</span>
+                    </li>
+                    <li href="./products/sportinggoods" class=""><span><i
+                            class="fa-solid fa-dumbbell me-2 mb-3"></i>Sporting Goods</span></li>
+                    <li href="./products/gaming" class=""><span><i class="fa-solid fa-gamepad me-2"></i>Gaming</span></li>
+                    </ul>
+                </div>
+                <!-- end of popover -->
+                </li>
+                <li class="nav-item  d-none d-md-inline-flex">
+                <a class="nav-link" href="/"><img src="./images/JMIA_BIG-4e420ed7.png" class="logo"></a>
+                </li>
+            </div>
+            <div class="col-7 col-md-6 col-lg-7 d-flex  align-items-center">
+                <li class="nav-item w-100">
+                <form  action='' class="d-flex" >
+                    <input class="form-control me-2 search-products" type="search" placeholder="Search products, brands and categories"
+                    aria-label="Search">
+                    <button class="btn search-btn fw-bold d-none d-md-flex search-products-btn" type="submit">SEARCH</button>
+                </form>
+                </li>
+            </div>
+            <div class="col-4 col-md-4 col-lg-3 d-flex justify-content-end align-items-center">
+                <li class="nav-item m-0">
+                <a class="nav-link hover-items" href="#" aria-disabled="true">
+                    <i class="fa-solid fa-user-shield fs-5"></i>
+                    <span class=" fw-semibold d-none d-md-inline">username</span>
+                </a>
+                </li>
+                <li class="nav-item m-0">
+                <a class="nav-link hover-items" href="#" aria-disabled="true">
+                    <i class="fa-regular fa-circle-question  fs-5"></i>
+                    <span class=" fw-semibold  d-none d-md-inline">Help</span>
+                </a>
+                </li>
+                <li class="nav-item m-0">
+                <a class="nav-link hover-items" href="#" aria-disabled="true">
+                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                    <span class=" fw-semibold  d-none d-md-inline">Cart</span>
+                </a>
+                </li>
+            </div>
+            </ul>
+        </header>
+    <!-- end of shop-header -->
+
+    <!-- Aside menu -->
+    <div class="container d-flex">
+        <div class="col-lg-2 m-5" >
+            <div id="simple-list-example" class="list-group bg-light d-flex flex-column gap-3 simple-list-example-scrollspy">
+                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    My Jumia Account
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Orders</a>
+                <a href="#" class="list-group-item list-group-item-action">Inbox</a>
+                <a href="#" class="list-group-item list-group-item-action">Pending Review</a>
+                <a href="#" class="list-group-item list-group-item-action">Vouchers</a>
+                <a href="#" class="list-group-item list-group-item-action">Saved Items</a>
+                <a href="#" class="list-group-item list-group-item-action">Recently Viewed</a>
+                <span class="border-bottom"></span>
+                <a href="#" class="list-group-item list-group-item-action">Account Management</a>
+                <a href="#" class="list-group-item list-group-item-action">Address Box</a>
+                <a href="#" id="closeAccount" class="list-group-item list-group-item-action">Close Account</a>
+                <a href="#" id="logout" class="btn list-group-item list-group-item-action text-warning ">Log Out</a>
+            </div>
+        </div>
+        <div class="wrapper col-lg-8 col-md-9 col-sm-12 d-flex  p-5 m-5" style="box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.08);">
+            <div class="p-5   rounded-start text-center text-light" style="width: 35%; background: linear-gradient(to right,#b35c15,#14adff);">
+                <img src="R.png" class="rounded mt-3 col-lg-12  h-50"  alt="user" width="100">
+                <span id="leftFName" class="mb-3 mt-4 fw-bold fs-3"> </span>
+                <span id="leftLName" class="mb-3 mt-4 fw-bold fs-3"></span>
+                <p class="fs-2 pt-3"> Visitor</p>
+            </div>
+            <div class="container-fluied">
+
+            </div>
+            <div class=" row  right p-4 rounded-end bg-light col-lg-8 col-sm-12">
+                <div class="container mb-1 info">
+                    <h3 class="header text-center p-3 text-uppercase border-bottom border-dark" style="letter-spacing: 5px;">Information</h3>
+                    <div class="info_data pt-4 text-center">
+                        <div class="data row p-5">
+                            <h4 class=" text-dark mb-2">Email</h4>
+                            <p id="email" class=" fs-6 mb-2 text-secondary"></p>
+                        </div>
+                        <div class="data">
+                            <h4 class="text-dark mb-2">full name</h4>
+                            <div>
+                                <span id="fName" class="fs-6 mb-2 text-secondary"></span>
+                                <span id="lName" class="fs-6 mb-2 text-secondary"></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- <div class="container projects m-3 mb-1">
+                    <h3 class="text-center p-3 text-uppercase border-bottom border-dark" style="letter-spacing: 5px;">products</h3>
+                    <div class="projects_data pt-4 d-flex justify-content-center">
+                        <div class="data row">
+                            <h4 class=" text-dark mb-2">Recent</h4>
+                            <p class="row fs-6 mb-2 text-secondary">sports category</p>
+                        </div>
+                        <div class="data">
+                            <h4 class="text-dark mb-2">Most Viewed</h4>
+                            <p class="fs-6 mb-2 text-secondary">car requirements category</p>
+                        </div>
+                    </div>
+                </div> -->
+    
+                <div class="social_media">
+                    <ul class="wrapper d-flex ml-2 mt-5 justify-content-center">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-white pt-5 pb-4">
+
+        <div class="container text-center text-md-left">
+
+            <div class="row text-center text-md-left">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
+                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                        ital consectetur lorem ipsum dolor sit amet adipisicing elit.</p>
+
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> TheProviders</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Creativity</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> SourceFiles</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> bootstrap 5 alpha</a>
+                    </p>
+
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Become an Affiliates</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;"> Help</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+                    <p>
+                        <i class="fas fa-home mr-3"></i>New York, NY 2333, US
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i>theproviders98@gmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i>+92 3162859445
+                    </p>
+                    <p>
+                        <i class="fas fa-print	 mr-3"></i>+01 335 633 77
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7 col-lg-8">
+                    <p> Copyright ©2020 All rights reserved by:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-warning">Easy Shop</strong>
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-right">
+
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
+                                        class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="proj.js"></script>
+</body>
+
+</html>
