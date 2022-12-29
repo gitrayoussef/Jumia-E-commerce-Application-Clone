@@ -11,6 +11,7 @@ body {
   background-position: left bottom;
   background-size: 500px;
   height: 100vh;
+  
 }
 
 input[type="text"],
@@ -102,15 +103,18 @@ input[type="email"]:focus {
 
 /* vaildation icon */
 
-.icon-check-circle {
-  color: #04aa6d;
-  font-size: 20px;
-  position: absolute;
-  top: 37px;
-  right: 16px;
-  opacity: 0;
-  transition: all 0.5s;
-}
+
+  .icon-check-circle{
+    color:  #f49301;
+    font-size: 20px;
+    position: absolute;
+    top: 37px;
+    right: 16px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+ 
+
 
 .papa {
   margin-top: 22px;
@@ -140,6 +144,8 @@ button:disabled {
   cursor: not-allowed;
   background-color: #f49301;
 }
+ 
+/* resposive */
 
 @media (max-width: 1000px) {
   .form-container {
@@ -168,3 +174,17 @@ button:disabled {
     border-radius: 15px;
   }
 }
+
+
+
+
+@media (max-width: 1250px) {
+  body {
+   
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    background-size: 500px;
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1)),url(./61CN3eHF4iL.jpg);
+  }
+} 

@@ -8,6 +8,7 @@ const activeReg = () => {
   }
 }
 
+// LOCAL Storage
 
 const signUp = e => {
   let firstname = document.getElementById('firstname').value,
@@ -35,10 +36,6 @@ const signUp = e => {
   }
   e.preventDefault();
 }
-
-
-
-
 
 
 
