@@ -22,21 +22,20 @@ const cartBadge = document.querySelector(".cart-badge");
 const userProfileLink = document.querySelector(".profile-link");
 const userProfileSpan = document.querySelector(".profile-span");
 
-
 // popover
 popoverIcon.addEventListener("click", function (e) {
   popoverBody.classList.toggle("d-none");
 });
 // get products
 window.addEventListener("load", function (e) {
-  getData("https://dummyjson.com/products/category/groceries");
+  getData("https://dummyjson.com/products/category/skincare");
   isLoggedIn();
 });
 // get product by rating
 chooseRating.addEventListener("click", async function (e) {
   cardParent.replaceChildren();
   const res = await getUrlData(
-    "https://dummyjson.com/products/category/groceries"
+    "https://dummyjson.com/products/category/skincare"
   );
   choseCertainRating(res);
 });
@@ -65,7 +64,7 @@ applyBtn.addEventListener("click", async function (e) {
   e.preventDefault();
   cardParent.replaceChildren();
   const res = await getUrlData(
-    "https://dummyjson.com/products/category/groceries"
+    "https://dummyjson.com/products/category/skincare"
   );
   choseCertainPriceRange(res);
 });
@@ -73,7 +72,7 @@ applyBtn.addEventListener("click", async function (e) {
 searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   const res = await getUrlData(
-    "https://dummyjson.com/products/category/groceries"
+    "https://dummyjson.com/products/category/skincare"
   );
   highlightSearchText(res);
 });
@@ -134,8 +133,8 @@ function createProductCard(product) {
   priceBerforeDiscount.innerHTML = `<del>EGP ${product.price}.00</del>`;
   cardBody.appendChild(priceBerforeDiscount);
   const discountPercentage = document.createElement("span");
-  discountPercentage.classList.add("discount-style" ,"card-text");
-  discountPercentage.innerHTML =`${product.discountPercentage}%`;
+  discountPercentage.classList.add("discount-style", "card-text");
+  discountPercentage.innerHTML = `${product.discountPercentage}%`;
   priceBerforeDiscount.appendChild(discountPercentage);
   const productRating = document.createElement("input");
   productRating.setAttribute("data-role", "rating");
@@ -172,10 +171,9 @@ function createProductCard(product) {
 }
 // Event handlers on created elements on the fly
 function createProductCardEvents(cartBlock, button, product, cardBody) {
-  cardBody.addEventListener('click', function (e) {
-    console.log("d");
-    localStorage.setItem("product" , JSON.stringify(product))
-    location.href = "https://www.google.com"
+  cardBody.addEventListener("click", function (e) {
+    localStorage.setItem("product", JSON.stringify(product));
+    location.href = "../../../Productpage/index.html";
   });
   button.addEventListener("click", function (e) {
     e.stopPropagation();
@@ -187,7 +185,7 @@ function createProductCardEvents(cartBlock, button, product, cardBody) {
     if (e.target.classList.contains("plus")) {
       if (userProfileSpan.innerHTML === "Login/Resgister") {
         const plusBtn = document.querySelector(".plus");
-        plusBtn.setAttribute("href", "../Loginpage/form.html");
+        plusBtn.setAttribute("href", "../../../Loginpage/form.html");
       } else {
         for (const child of cartBlock.children) {
           if (child.classList.contains("text-counter")) {
@@ -203,7 +201,7 @@ function createProductCardEvents(cartBlock, button, product, cardBody) {
     if (e.target.classList.contains("minus")) {
       if (userProfileSpan.innerHTML === "Login/Resgister") {
         const minusBtn = document.querySelector(".minus");
-        minusBtn.setAttribute("href", "../Loginpage/form.html");
+        minusBtn.setAttribute("href", "../../../Loginpage/form.html");
       } else {
         for (const child of cartBlock.children) {
           if (child.classList.contains("text-counter")) {
@@ -280,12 +278,12 @@ function highlightSearchText(res) {
 // Function to check whether user is logged in or not
 function isLoggedIn() {
   userProfileSpan.innerHTML = "Login/Resgister";
-  userProfileLink.setAttribute("href", "../Loginpage/form.html");
+  userProfileLink.setAttribute("href", "../../../Loginpage/form.html");
   JSON.parse(localStorage.getItem("user")).forEach((user) => {
     let email = user.email;
     if (user.isloggedin) {
       userProfileSpan.innerHTML = "Hi," + " " + user.firstname;
-      userProfileLink.setAttribute("href", "../Profile/index.html");
+      userProfileLink.setAttribute("href", "../../../Profile/index.html");
       JSON.parse(localStorage.getItem("cart")).forEach((data) => {
         if (data.email === email) {
           cartBadge.innerHTML = data.products.length;
