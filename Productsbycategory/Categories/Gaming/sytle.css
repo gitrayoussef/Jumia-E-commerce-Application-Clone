@@ -150,12 +150,19 @@ header .form-control:focus {
   transition: all 1s;
   font-size: 14px;
   font-weight: 600;
-  border: none;
 }
 
 .add-cart-btn:hover {
   background-color: #d07d02;
   color: white;
+}
+
+.line-truncate {
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .discount-style{

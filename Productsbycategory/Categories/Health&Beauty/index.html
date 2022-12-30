@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product</title>
+  <title>Supermarket</title>
   <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4.5.1/css/metro-all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -21,7 +21,7 @@
     <div class="col-10 col-lg-11">
       <img data-src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png"
         src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png" class="img-fluid w-100"
-        alt="Flas-Sale-Desktop" />
+        alt="Flas-Sale-Desktop"/>
     </div>
   </div>
   <!-- end of banner -->
@@ -33,11 +33,11 @@
         <span><a href="https://sell.jumia.com/en/start-now/" class="sell-link">Sell on Jumia</a></span>
       </div>
       <div class="col-4 text-center shp-pay-container row justify-content-between align-items-center">
-        <img src="../images/logo-jumia-pay.jpg" alt="" class="shp-logo-img crusor-pointer" />
-        <img src="../images/logo-jumia-pay.jpg" alt="" class="shp-logo-img" />
+        <img src="../../images/logo-jumia-pay.jpg" alt="" class="shp-logo-img crusor-pointer" />
+        <img src="../../images/logo-jumia-pay.jpg" alt="" class="shp-logo-img" />
       </div>
       <div class="col-3  d-flex align-items-center justify-content-end language-container">
-        <img src="../images/18379990731626933880-128.png" alt="" class="shp-language-img me-2">
+        <img src="../../images/18379990731626933880-128.png" alt="" class="shp-language-img me-2">
         <span>English</span>
       </div>
     </div>
@@ -72,7 +72,7 @@
             <!-- end of popover -->
           </li>
           <li class="nav-item  d-none d-md-inline-flex">
-            <a class="nav-link" href="../Homepage/index.html"><img src="../images/JMIA_BIG-4e420ed7.png" class="logo"
+            <a class="nav-link" href="../Homepage/index.html"><img src="../../images/JMIA_BIG-4e420ed7.png" class="logo"
                 style="height: 20px;"></a>
           </li>
         </div>
@@ -109,98 +109,71 @@
       </ul>
     </header>
     <!-- end of shop-header -->
-
-    <!-- start of product-page-main body -->
+    <!-- start of shop-main body -->
     <div class="col-12 p-0 ps-md-3 pe-md-3 ps-lg-5 pe-lg-5 mb-0">
-      <main class="row m-0 p-0 mt-2  gx-3 ps-lg-5 pe-lg-5">
-        <p class="mb-0 pb-0"><small class="text-muted product-category">Home</small></p>
-        <!-- start of product section -->
-        <div class="col-6 col-sm-7 col-md-8 col-lg-9 text-start pt-0">
-          <div class="card product bg-white rounded-3 shadow w-100 mb-3 p-3">
-            <div class="row g-0 align-items-start">
-              <div class="col-md-5 product-image-container">
-                <!-- embedding image here -->
+      <main class="row m-0 p-0 mt-2 mb-1 gx-3 ps-lg-5 pe-lg-5">
+        <!-- start of aside section -->
+        <div class="col-6 col-sm-5 col-md-4 col-lg-3 text-start">
+          <div class="category bg-white p-2 rounded shadow h-100">
+            <div class="category-links border-bottom p-0 m-0 pb-4">
+              <h6>CATEGORY</h6>
+              <p class="mb-3 fw-semibold fs-6">Supermarket</p>
+              <ul class="list-unstyled border-1 ps-3 hover-categories">
+                <li class="mb-2"><a href="./products/supermarket/air-freshner.html"
+                    class="text-decoration-none text-dark text">
+                    Air Freshener</a></li>
+                <li class="mb-2"> <a href="./products/supermarket/breads&bakery.html"
+                    class="text-decoration-none text-dark"> Breads & Bakery</a></li>
+                <li class="mb-2"><a href="./products/supermarket/candy&chocolets.html"
+                    class="text-decoration-none text-dark">Candy & Chocolets</a> </li>
+                <li class="mb-2"><a href="./products/supermarket/drinks.html" class="text-decoration-none text-dark">
+                    Drinks</a></li>
+                <li class="mb-2"><a href="./products/supermarket/households.html"
+                    class="text-decoration-none text-dark">Households</a> </li>
+                <li class="mb-2"><a href="./products/supermarket/laundry.html"
+                    class="text-decoration-none text-dark">Laundry</a> </li>
+              </ul>
+            </div>
+            <form class="range border-1 border-bottom p-0 m-0 pb-4 pt-4">
+              <div class="d-flex justify-content-between align-items-center fw-semibold">
+                <label for="customRange2" class="form-label fs-6">PRICE (EGP)</label>
+                <button type="button" class="btn btn-sm apply-btn">APPLY</button>
               </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h2 class="card-title product-title">Card title</h2>
-                  <p class="card-text product-description fs-4 pb-0 mb-0 fw-normal"></p>
-                  <input data-role="rating" data-star-color="yellow" data-stared-color="yellow" class="product-rating ">
-                  <hr class="text-muted mt-0">
-                  <h4 class="card-text product-price-after-discount"></h4>
-                  <p class="card-text product-price-before-discount text-muted fw-light"></p>
-                  <a
-                    class="btn btn-primary w-100 fw-bold add-cart-btn mt-4 fs-5 d-flex justify-content-center align-items-center fw-semibold"><span><i
-                        class="fa fa-cart-plus fs-5 pe-3"></i></span>ADD TO CART</a>
-                </div>
+              <label for="min-value-price" class="fw-semibold"> minimum required price</label>
+              <input id="min-value-price" data-role="slider" class="ultra-thin cycle-marker mb-4 price-slider"
+                data-cls-complete="bg-orange" data-cls-marker="bg-orange border-50 custom-marker"
+                data-cls-hint="bg-orange border-50 custom-marker" data-hint-position="bottom" data-value="400"
+                data-min="1" data-max="1100" data-hint="true">
+              <label for="max-value-price" class="fw-semibold"> maximum required price</label>
+              <input id="max-value-price" data-role="slider" class="ultra-thin cycle-marker mb-4 price-slider"
+                data-cls-complete="bg-orange" data-cls-marker="bg-orange border-50 custom-marker"
+                data-cls-hint="bg-orange border-50 custom-marker" data-hint-position="bottom" data-value="400"
+                data-min="1" data-max="1100" data-hint="true">
+              <div class="d-flex justify-content-evenly align-items-center">
+                <input type="number" class="form-range-min-number" min="1" max="11000" value="1"
+                  class="border-light rounded p-1" style="width: 5rem;"> -
+                <input type="number" class="form-range-max-number" min="1" max="11000" value="11000"
+                  class="border-light rounded p-1" style="width: 5rem;">
               </div>
+            </form>
+            <div class="rating  p-0 m-0 pb-4 pt-4 d-block">
+              <p class="mb-3 fw-semibold fs-6">PRODUCT BY RATING</p>
+              <input data-role="rating" data-value="0" data-star-color="yellow" data-stared-color="yellow">
             </div>
           </div>
         </div>
-        <!-- end of product section -->
-        <!-- start of Delivery return section -->
-        <div class="col-6 col-sm-5 col-md-4 col-lg-3 text-start pt-2">
-          <div class=" bg-white p-1 rounded shadow w-100 mb-3 p-3">
-            <h3>Delivery &amp; Returns</h3>
-            <hr class="text-muted mt-0">
-            <div class="pt-0 mt-0 pb-1 mb-4">
-              <h5 class="">Choose your location</h5>
-              <select required="" class="w-100 id=" fi-regionId" name="regionId" aria-label="Region">
-                <option value="" disabled="">Please select</option>
-                <option value="184">Al Beheira</option>
-                <option value="182">Al Daqahliya</option>
-                <option value="185">Al Fayoum</option>
-                <option value="186">Al Gharbia</option>
-                <option value="191">Al Meniya</option>
-                <option value="190">Al Monufia</option>
-                <option value="196">Al Sharqia</option>
-                <option value="187">Alexandria</option>
-                <option value="199">Aswan</option>
-                <option value="200">Asyut</option>
-                <option value="201">Bani Souaif</option>
-                <option value="192" selected="">Cairo</option>
-                <option value="203">Damietta</option>
-                <option value="189">Giza</option>
-                <option value="188">Ismailia</option>
-                <option value="206">Kafr El-Sheikh</option>
-                <option value="194">Luxor</option>
-                <option value="260">North Coast</option>
-                <option value="202">Port Said</option>
-                <option value="193">Qalyubia</option>
-                <option value="208">Qena</option>
-                <option value="183">Red Sea</option>
-                <option value="210">Sohag</option>
-                <option value="205">South Sinai</option>
-                <option value="198">Suez</option>
-              </select>
-            </div>
-            <div class="pt-0 mt-0 pb-1 mb-4">
-              <h5>Door Delivery</h5>
-              <hr class="text-muted mt-0 mb-2">
-              <div class="mt-0 pt-0">Delivery by <em>01 February</em> when you order within next
-                <em>15hrs 7mins</em>
-              </div>
-            </div>
-            <div class="pt-0 mt-0 pb-1 mb-4">
-              <h5>Pickup Station</h5>
-              <hr class="text-muted mt-0 mb-2">
-              <div class="mt-0 pt-0">Pickup by <em>01 February</em> when you order within next
-                <em>15hrs 7mins</em>
-              </div>
-            </div>
-            <div class="pt-0 mt-0 pb-1 mb-4">
-              <h5>Return Policy</h5>
-              <hr class="text-muted mt-0 mb-2">
-              <p class="-ptxs">Free return within the legal return period from 14 to 30 days, and if they meet
-                the terms &amp; conditions, For more details about return policy.</p>
-            </div>
+        <!-- end of aside section -->
+        <!-- start of products section -->
+        <div class="col-6 col-sm-7 col-md-8 col-lg-9 gx-1">
+          <div
+            class=" row bg-white rounded shadow flex-start flex-wrap justify-content-start align-items-start m-0 p-0 append-cards">
+            <!-- render products card here -->
           </div>
         </div>
-
-  <!-- end of Delivery return section -->
-  </main>
-  </div>
-  <!-- end of of product-page-main body -->
+        <!-- end of products section -->
+      </main>
+    </div>
+    <!-- end of shop-main body -->
   </div>
   <!-- start of footer -->
   <div class="col-12 text-start pt-0 mt-0">
@@ -307,3 +280,4 @@
 </body>
 
 </html>
+
