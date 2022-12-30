@@ -1,41 +1,36 @@
-// declare variables to get data from local storage
-// document.getElementById("left_name").innerHTML = localStorage.getItem("");
-// document.getElementById("email").innerHTML = localStorage.getItem("");
-// document.getElementById("leftFName").innerHTML = localStorage.getItem("");
-// document.getElementById("leftLName").innerHTML = localStorage.getItem("");
-// document.getElementById("fName").innerHTML = localStorage.getItem("");
-// document.getElementById("lName").innerHTML = localStorage.getItem("");
+
 // Define popover Variables
 const popoverIcon = document.querySelector(".popover-icon");
 const popoverBody = document.querySelector(".popover-body");
+// Define Cart items
+const cartBadge = document.querySelector(".cart-badge");
+// Define user profile link & logging in
+const userProfileLink = document.querySelector(".profile-link");
+const userProfileSpan = document.querySelector(".profile-span");
+
+
+// get products
+window.addEventListener("load", function (e) {
+    isLoggedIn();
+  });
 // popover
 popoverIcon.addEventListener("click", function (e) {
     popoverBody.classList.toggle("d-none");
   });
-
-// user logout
-let logout = document.getElementById("logout").addEventListener("click",function(){
-    location.href = "../Homepage/index.html";
-});
-
-
-//clear user account
-// let closeAccount = document.getElementById("closeAccount").addEventListener("click",function(){
-//     localStorage.removeItem("");
-// });
-
-let active = document.querySelectorAll("a");
-
-//hover on aside menu
-active.forEach((a) => {
-    a.addEventListener("click",(e)=> {
-        active.forEach((a)=>{
-            a.classList.remove("active")
+// Function to check whether user is logged in or not
+function isLoggedIn() {
+    userProfileSpan.innerHTML = "Login/Resgister";
+    userProfileLink.setAttribute("href", "../../../Loginpage/form.html");
+    JSON.parse(localStorage.getItem("user")).forEach((user) => {
+      let email = user.email;
+      if (user.isloggedin) {
+        userProfileSpan.innerHTML = "Hi," + " " + user.firstname;
+        userProfileLink.setAttribute("href", "../../../Profile/index.html");
+        JSON.parse(localStorage.getItem("cart")).forEach((data) => {
+          if (data.email === email) {
+            cartBadge.innerHTML = data.products.length;
+          }
         });
-        a.classList.add("active");
+      }
     });
-});
-
-
-
-
+  }
