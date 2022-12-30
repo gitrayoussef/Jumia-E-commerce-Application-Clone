@@ -46,6 +46,11 @@
     <header
       class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5 bg-white position-sticky top-0">
       <ul class="nav justify-content-center w-100 ps-lg-5 pe-lg-5">
+        <!-- user alert message -->
+        <div class="alert alert-success alert-dismissible fade show col-12 d-none alert-user" role="alert">
+          <span class="alert-message"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <div class="col-1 col-md-2 d-flex  align-items-center">
           <li class="nav-item  popover-icon">
             <i type="button" class="fa-solid fa-bars fs-5">
@@ -97,7 +102,7 @@
             </a>
           </li>
           <li class="nav-item m-0 pt-0">
-            <a class="nav-link hover-items pe-0" href="../Cartpage/index.html" aria-disabled="true">
+            <a class="nav-link hover-items pe-0" href="../../../Cartpage/index.html" aria-disabled="true">
               <i class="fa-solid fa-cart-shopping fs-5"></i>
               <span class=" fw-semibold  d-none d-lg-inline">Cart</span>
               <span class=" fw-semibold  badge bg-red fg-white mt-1 cart-badge"></span>

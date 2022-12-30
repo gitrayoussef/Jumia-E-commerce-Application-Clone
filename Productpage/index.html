@@ -46,6 +46,11 @@
     <header
       class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5 bg-white position-sticky top-0">
       <ul class="nav justify-content-center w-100 ps-lg-5 pe-lg-5">
+        <!-- user alert message -->
+        <div class="alert alert-success alert-dismissible fade show col-12 d-none alert-user" role="alert">
+          <span class="alert-message"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <div class="col-1 col-md-2 d-flex  align-items-center">
           <li class="nav-item  popover-icon">
             <i type="button" class="fa-solid fa-bars fs-5">
@@ -53,20 +58,22 @@
             <!-- start of popover -->
             <div class="popover-body d-none">
               <ul class="popover-content list-unstyled p-4">
-                <li href="./products/supermarket" class=""><span><i
-                      class="fa-solid fa-apple-whole me-2 mb-3"></i>Supermarket</span></li>
-                <li href="./products/fashion" class=""><span><i class="fa-solid fa-shirt me-2 mb-3"></i>Fashion</span>
+                <li class=""><span><i class="fa-solid fa-apple-whole me-2 mb-3"></i><a
+                      href="../Productsbycategory/Categories/Supermarket/index.html">Supermarket</a></span></li>
+                <li class=""><span><i class="fa-solid fa-shirt me-2 mb-3"></i><a
+                      href="../Productsbycategory/Categories/Fashion/index.html">Fashion</a></span>
                 </li>
-                <li href="./products/health&beauty" class=""><span><i class="fa-solid fa-user me-2 mb-3"></i>Health &
-                    Beauty</span></li>
-                <li href="./products/phones&tablets" class=""><span><i
-                      class="fa-solid fa-mobile-screen-button me-2 mb-3"></i>Phones &
-                    Tablets</span>
+                <li class=""><span><i class="fa-solid fa-user me-2 mb-3"></i><a
+                      href="../Productsbycategory/Categories/Health&Beauty/index.html">Health &
+                      Beauty</a></span></li>
+                <li class=""><span><i class="fa-solid fa-mobile-screen-button me-2 mb-3"></i><a
+                      href="../Productsbycategory/Categories/Phones&Tablets/index.html">Phones &
+                      Tablets</a></span>
                 </li>
-                <li href="./products/sportinggoods" class=""><span><i
-                      class="fa-solid fa-dumbbell me-2 mb-3"></i>Sporting
-                    Goods</span></li>
-                <li href="./products/gaming" class=""><span><i class="fa-solid fa-gamepad me-2"></i>Gaming</span></li>
+                <li class=""><span><i class="fa-solid fa-home me-2 mb-3"></i><a
+                      href="../Productsbycategory/Categories/Home decoration/index.html">Home Decoration</a></span></li>
+                <li class=""><span><i class="fa-solid fa-gamepad me-2"></i><a
+                      href="../Productsbycategory/Categories/Gaming/index.html">Gaming</a></span></li>
               </ul>
             </div>
             <!-- end of popover -->
@@ -197,10 +204,10 @@
           </div>
         </div>
 
-  <!-- end of Delivery return section -->
-  </main>
-  </div>
-  <!-- end of of product-page-main body -->
+        <!-- end of Delivery return section -->
+      </main>
+    </div>
+    <!-- end of of product-page-main body -->
   </div>
   <!-- start of footer -->
   <div class="col-12 text-start pt-0 mt-0">

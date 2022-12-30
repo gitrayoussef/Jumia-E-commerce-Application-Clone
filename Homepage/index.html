@@ -13,21 +13,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <title>Home page</title>
 </head>
+<body>
 <!-- start of banner -->
 <div id="banner" class="row justify-content-center align-content-center m-0 w-100">
     <div class="col-10 col-lg-11">
-      <img  src="./assets/banner.png" class="img-fluid w-100"alt="Flas-Sale-Desktop" />
+      <img data-src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png"
+        src="https://eg.jumia.is/cms/Dec-22/Sticky-Banner/Flash-Sale/NEW/EN_-_1170x60_.png" class="img-fluid w-100"
+        alt="Flas-Sale-Desktop" />
     </div>
   </div>
   <!-- end of banner -->
   <!-- start of shop-links -->
-  <div id="shp" class="row justify-content-center align-items-center  w-100 ms-0 me-0" >
-    <div class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5">
+  <div id="shp" class="row justify-content-center align-items-center  w-100 ms-0 me-0 ">
+    <div class="col-11 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5">
       <div class="col-4 text-start">
         <span class="icon-container"><i class="fa-solid fa-sun me-2"></i></span>
-        <span><a href="./assets/jum.png" class="sell-link">Sell on Jumia</a></span>
+        <span><a href="https://sell.jumia.com/en/start-now/" class="sell-link">Sell on Jumia</a></span>
       </div>
-      <div class="col-5 text-center shp-pay-container row justify-content-between align-items-center">
+      <div class="col-4 text-center shp-pay-container row justify-content-between align-items-center">
         <img src="./assets/lo-jum.jpg" alt="" class="shp-logo-img crusor-pointer" />
         <img src="./assets/lo-jum.jpg" alt="" class="shp-logo-img" />
       </div>
@@ -40,38 +43,40 @@
     <!-- start of shop-header -->
     <header
       class="col-12 d-flex justify-content-between align-items-center pt-2 pb-2 ps-0 pe-0 ps-md-5 pe-md-5 bg-white position-sticky top-0">
-      <ul class="nav justify-content-center w-100">
+      <ul class="nav justify-content-center w-100 ps-lg-5 pe-lg-5">
         <div class="col-1 col-md-2 d-flex  align-items-center">
           <li class="nav-item  d-none d-md-inline-flex">
-            <a class="nav-link" href="/"><img src="./assets/jum.png" class="logo"></a>
+            <a class="nav-link" href="../Homepage/index.html"><img src="./assets/jum.png" class="logo"
+                style="height: 20px;"></a>
           </li>
         </div>
         <div class="col-7 col-md-6 col-lg-7 d-flex  align-items-center">
           <li class="nav-item w-100">
-            <form  action='' class="d-flex" >
-              <input class="form-control me-2 search-products" type="search" placeholder="Search products, brands and categories"
-                aria-label="Search">
+            <form action='' class="d-flex">
+              <input class="form-control me-2 search-products" type="search"
+                placeholder="Search products, brands and categories" aria-label="Search">
               <button class="btn search-btn fw-bold d-none d-md-flex search-products-btn" type="submit">SEARCH</button>
             </form>
           </li>
         </div>
         <div class="col-4 col-md-4 col-lg-3 d-flex justify-content-end align-items-center">
           <li class="nav-item m-0">
-            <a class="nav-link hover-items" href="#" aria-disabled="true">
+            <a class="nav-link hover-items profile-link" aria-disabled="true">
               <i class="fa-solid fa-user-shield fs-5"></i>
-              <span class=" fw-semibold d-none d-md-inline">username</span>
+              <span class=" fw-semibold d-none d-lg-inline profile-span">username</span>
             </a>
           </li>
           <li class="nav-item m-0">
             <a class="nav-link hover-items" href="#" aria-disabled="true">
               <i class="fa-regular fa-circle-question  fs-5"></i>
-              <span class=" fw-semibold  d-none d-md-inline">Help</span>
+              <span class=" fw-semibold  d-none d-lg-inline">Help</span>
             </a>
           </li>
-          <li class="nav-item m-0">
-            <a class="nav-link hover-items" href="#" aria-disabled="true">
+          <li class="nav-item m-0 pt-0">
+            <a class="nav-link hover-items pe-0" href="../Cartpage/index.html" aria-disabled="true">
               <i class="fa-solid fa-cart-shopping fs-5"></i>
-              <span class=" fw-semibold  d-none d-md-inline">Cart</span>
+              <span class=" fw-semibold  d-none d-lg-inline">Cart</span>
+              <span class=" fw-semibold  badge bg-red fg-white mt-1 cart-badge"></span>
             </a>
           </li>
         </div>
@@ -82,34 +87,25 @@
 <div class="container mt-3 gy-2" style="overflow: hidden;">
     <!--raw one main-->
     <div class="row gx-2">
-        <div class="col">
+        <div class="col " style="height:auto;">
             <!--card of row 1-->
-            <div class="card" style="width:100% ;height:100%;padding: 10px;">
-                <h5>Categories</h5>
-                <ol>
-                    <a>
-                        <li>sports</li>
-                    </a>
-                    <a>
-                        <li>furniture</li>
-                    </a>
-                    <a>
-                        <li>toys</li>
-                    </a>
-                    <a>
-                        <li>clothes</li>
-                    </a>
-                    <a>
-                        <li>food</li>
-                    </a>
-                    <a>
-                        <li>drinks</li>
-                    </a>
-                    <a>
-                        <li>perfumes</li>
-                    </a>
-                </ol>
-            </div>
+            <div class="list-group list-group-light  ">
+           <!--badge-->
+            <h2 class="my-4" >Category  <span class="badge bg-secondary">New</span></h2>
+            <!--badge end-->
+                <a href="../Productsbycategory/Categories/Supermarket/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Supermarket</a>
+                <a href="../Productsbycategory/Categories/Fashion/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Fashion</a>
+                <a href="../Productsbycategory/Categories/Health&Beauty/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Health & Beauty</a>
+                <a href="../Productsbycategory/Categories/Phones&Tablets/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Phones & Tablets</a>
+                <a href="../Productsbycategory/Categories/Home decoration/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Home decoration</a>
+                <a href="../Productsbycategory/Categories/Gaming/index.html" class="list-group-item list-group-item-action px-3 border-0 rounded-3 mb-2 list-group-item-dark">
+                    Gaming</a>
+              </div>
             <!--card of row 1-->
         </div>
         <div class="col-6 ">
@@ -174,11 +170,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">kakao</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -187,11 +183,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">nuts</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -200,11 +196,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">banana</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -217,11 +213,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">white chocolate</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -230,11 +226,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">sweet</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -243,11 +239,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">Cake</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -260,11 +256,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">gato</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -273,11 +269,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">Cookies</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                         <div class="card2">
@@ -286,11 +282,11 @@
                                     alt="...">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title">chocolate</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's
                                     content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-warning">Go somewhere</a>
                             </div>
                         </div>
                     </div>
@@ -308,7 +304,7 @@
         <div class="col-md-10" style="width: 100%;">
             <div class="row p-2 bg-white border rounded">
                 <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
-                        src="https://i.imgur.com/QpjAiHq.jpg"></div>
+                        src="./assets/1.jpg"></div>
                 <div class="col-md-6 mt-1">
                     <h5>Quant olap shirts</h5>
                     <div class="d-flex flex-row">
@@ -327,15 +323,15 @@
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                            type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
+                    <h6 class="text" style="color: darkorange;">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-warning btn-sm"
+                            type="button">Details</button><button class="btn btn-outline-warning btn-sm mt-2"
                             type="button">Add to wishlist</button></div>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded mt-2">
                 <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
-                        src="https://i.imgur.com/JvPeqEF.jpg"></div>
+                        src="./assets/2.jpg"></div>
                 <div class="col-md-6 mt-1">
                     <h5>Quant trident shirts</h5>
                     <div class="d-flex flex-row">
@@ -354,15 +350,15 @@
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">$14.99</h4><span class="strike-text">$20.99</span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                            type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
+                    <h6 class="text" style="color: darkorange;">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-warning btn-sm"
+                            type="button">Details</button><button class="btn btn-outline-warning btn-sm mt-2"
                             type="button">Add to wishlist</button></div>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded mt-2">
                 <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
-                        src="https://i.imgur.com/Bf4dIaN.jpg"></div>
+                        src="./assets/3.jpg"></div>
                 <div class="col-md-6 mt-1">
                     <h5>Quant ruybi shirts</h5>
                     <div class="d-flex flex-row">
@@ -381,15 +377,15 @@
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                            type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
+                    <h6 class="text" style="color: darkorange;">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-warning btn-sm"
+                            type="button" >Details</button><button class="btn btn-outline-warning btn-sm mt-2"
                             type="button">Add to wishlist</button></div>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded mt-2">
                 <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
-                        src="https://i.imgur.com/HO8e9b8.jpg"></div>
+                        src="./assets/c.jpg"></div>
                 <div class="col-md-6 mt-1">
                     <h5>Quant tinor shirts</h5>
                     <div class="d-flex flex-row">
@@ -408,10 +404,10 @@
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">$15.99</h4><span class="strike-text">$21.99</span>
                     </div>
-                    <h6 class="text-success">Free shipping</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm"
-                            type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2"
-                            type="button">Add to wishlist</button></div>
+                    <h6 class="text" style="color: darkorange;">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4">
+                        <button class="btn btn-warning btn-sm" type="button">Details</button>
+                        <button class="btn btn-outline-warning btn-sm mt-2"type="button">Add to wishlist</button></div>
                 </div>
             </div>
         </div>
@@ -420,7 +416,7 @@
 </div>
 <!--container end-->
 
-<body>
+
     <!--footer-->
     <footer class="bg-dark text-white pt-5 pb-4">
 
@@ -538,5 +534,6 @@
 </body>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/all.min.js"></script>
+<script src="./myscript.js"></script>
 
 </html>

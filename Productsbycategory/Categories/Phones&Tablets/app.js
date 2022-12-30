@@ -21,6 +21,9 @@ const cartBadge = document.querySelector(".cart-badge");
 // Define user profile link & logging in
 const userProfileLink = document.querySelector(".profile-link");
 const userProfileSpan = document.querySelector(".profile-span");
+// alert user
+const alertMessage = document.querySelector(".alert-message");
+const alertUser = document.querySelector(".alert-user");
 
 // popover
 popoverIcon.addEventListener("click", function (e) {
@@ -294,6 +297,7 @@ function isLoggedIn() {
 }
 // Function to insert items to user cart in local storage
 function setItemsToUserCartToLocalStorage(product) {
+  alertUser.classList.add("d-none");
   JSON.parse(localStorage.getItem("user")).forEach((user) => {
     let email = user.email;
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -309,12 +313,16 @@ function setItemsToUserCartToLocalStorage(product) {
         cart.push({ email, products });
         localStorage.setItem("cart", JSON.stringify(cart));
         cartBadge.innerHTML = 1;
+        alertUser.classList.remove("d-none");
+        alertMessage.innerHTML = "Product was added successfully!!!";
       } else {
         cart.forEach((data) => {
           if (data.email === email) {
             data.products.push(product);
             cartBadge.innerHTML = data.products.length;
             localStorage.setItem("cart", JSON.stringify(cart));
+            alertUser.classList.remove("d-none");
+        alertMessage.innerHTML = "Product was added successfully!!!";
           }
         });
       }
@@ -323,6 +331,7 @@ function setItemsToUserCartToLocalStorage(product) {
 }
 // Function to delete items from user cart in local storage
 function deleteItemsFromUserCartFromLocalStorage(product) {
+  alertUser.classList.add("d-none");
   JSON.parse(localStorage.getItem("user")).forEach((user) => {
     let email = user.email;
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -337,6 +346,8 @@ function deleteItemsFromUserCartFromLocalStorage(product) {
           }
           cartBadge.innerHTML = data.products.length;
           localStorage.setItem("cart", JSON.stringify(cart));
+          alertUser.classList.remove("d-none");
+          alertMessage.innerHTML = "Product was deleted successfully!!!";
         }
       });
     }

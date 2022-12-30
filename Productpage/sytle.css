@@ -106,7 +106,11 @@ header .form-control:focus {
   font-size: 16px;
 }
 
-.popover-content li:hover {
+.popover-content li a {
+  color: black;
+}
+
+.popover-content li a:hover {
   color: #f49301;
   cursor: pointer;
 }
@@ -142,7 +146,6 @@ header .form-control:focus {
 }
 
 /* products - column */
-
 .add-cart-btn {
   width: 100%;
   background-color: #f49301;
