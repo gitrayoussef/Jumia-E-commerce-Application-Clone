@@ -1,5 +1,5 @@
 # 🔥 Jumia E-commerce Application Clone
-## [View Website](https://favyelpcamp.herokuapp.com/)
+## [View Website](https://jumiacloneiti.netlify.app/)
 ### 🔥 Frontend Project using (Html / CSS / Bootstrap / MetroUI / Javascript)
 
 - Dynamic Web Application
@@ -13,11 +13,10 @@
 - Unique Product Page for Each Product to display its information
 - User cannot add products to their cart except they are logged in or registered
 - User can use Logout Button on his Profile Page to Logout or use Close Account Button to remove him from Database of the Website
-
 - Cart Page to show all cart's products data to the user including Price per unit and calculation of Total Price of the order
 - When User Checkout his order , this will redirect him to his own profile page to track his order
 - Attractive UI/UX Design
 - Responsive Design - Compatible with all mobile devices and different screen sizes 
 
 
-💙 You can view my different projects and contact me through my [Website](https://karimali.netlify.app)
+💙💙💙💙 ITI - FULL STACK PHP 2022 ALEXANDRIA BRANCH 💙💙💙💙
