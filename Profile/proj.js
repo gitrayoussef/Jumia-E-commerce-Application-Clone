@@ -59,7 +59,7 @@ logout.addEventListener("click", function (e) {
     updatedLocalStorage.push(user);
   });
   localStorage.setItem("user", JSON.stringify(updatedLocalStorage));
-  logout.setAttribute("href", "../Homepage/index.html");
+  logout.setAttribute("href", "../../../index.html");
 });
 // adding close account click event
 closeAccount.addEventListener("click", function (e) {
@@ -70,5 +70,5 @@ closeAccount.addEventListener("click", function (e) {
     }
   });
   localStorage.setItem("user", JSON.stringify(updatedLocalStorage));
-  closeAccount.setAttribute("href", "../Homepage/index.html");
+  closeAccount.setAttribute("href", "../../../index.html");
 });
