@@ -24,7 +24,7 @@ function signIn() {
         updatedLocalStorage.push(element);
       }
     });
-    location.href = "../Homepage/index.html";
+    location.href = "../../../index.html";
   }
   JSON.parse(
     localStorage.setItem("user", JSON.stringify(updatedLocalStorage))
